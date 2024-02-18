@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 80%;
+        margin: auto;
+      }
+
+      div {
+        margin-top: 20px;
+        width: 47%;
+        min-height: 500px;
+        display: inline-block;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .rojo {
+        color: red;
+      }
+
+      table,
+      th,
+      td {
+        border: solid 1px black;
+        padding: 5px;
+        text-align: center;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Apilando libros</h1>
+    <button id="btn-apilar">Apila libro</button>
+    <button id="btn-desapilar">Desapila libro</button>
+    <br />
+    <div>
+      <table id="pila-libros"></table>
+      <hr />
+    </div>
+    <div>
+      <h2>Resultado de la operación:</h2>
+      <p id="mensaje"></p>
+    </div>
+    <script>
+      function apilaLibro() {}
+
+      function desapilaLibro() {}
+
+      function generaNombreLibro() {
+        return "LIBRO " + Math.floor(Math.random() * 1000 + 1);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 60%;
+        margin: auto;
+      }
+
+      table,
+      th,
+      td {
+        border: solid 1px black;
+        padding: 5px;
+        text-align: center;
+        border-collapse: collapse;
+      }
+      .invisible {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Genera un array de aleatorios y lo muestra en dos formatos</h1>
+    <table id="tabla-vertical" class="invisible"></table>
+    <br />
+    <table id="tabla-horizontal" class="invisible"></table>
+    <button id="btn-procesar">Procesar</button>
+
+    <script>
+      // Añade aquí el código para hacer que el botón "Procesar"
+      // escuche el evento "click" y llame a la función "procesar"
+      // cuando se produzca el evento.
+
+      function procesar() {
+        let array = creaArray();
+        pintaTablaVertical(array);
+        pintaTablaHorizontal(array);
+        ocultaBoton();
+      }
+
+      function creaArray() {}
+
+      function pintaTablaVertical(array) {}
+
+      function pintaTablaHorizontal(array) {}
+
+      function ocultaBoton() {}
+    </script>
+  </body>
+</html>
