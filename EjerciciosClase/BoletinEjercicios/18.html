@@ -8,6 +8,16 @@
   <body>
     <h1 id="titular">Pon tu título aquí</h1>
     <p id="parrafo">Esto es un párrafo de muestra</p>
-    <script></script>
+    <script>
+      let tituloUsuario = prompt("Dime el titular");
+      let titular = document.querySelector("#titular");
+      titular.innerText = tituloUsuario;
+
+      let parrafoUsuario = prompt("Dime el párrafo de la noticia ");
+      let parrafo = document.querySelector("#parrafo");
+      parrafo.innerHTML = `<a href="https://developer.mozilla.org/es/">
+                                ${parrafoUsuario}
+                            </a>`;
+    </script>
   </body>
 </html>
