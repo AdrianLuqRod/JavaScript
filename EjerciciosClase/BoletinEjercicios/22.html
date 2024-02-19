@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+
   <body>
     <h1>Tu próximo oponente aparecerá en 3, 2, 1</h1>
     <h2></h2>
@@ -43,6 +45,11 @@
           },
         ];
         // Escribe tu código aquí
+        let index = Math.floor(Math.random() * fighters.length);
+        let figther = fighter[index];
+        document.querySelector("h1").innerText = fighter.name;
+        document.querySelector("h2").innerText = fighter.country;
+        document.querySelector("img").src = fighter.image;
       }
       setTimeout(changeFighter, 3000);
     </script>

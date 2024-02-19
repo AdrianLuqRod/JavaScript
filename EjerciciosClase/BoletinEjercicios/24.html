@@ -44,11 +44,27 @@
     />
 
     <script>
-      function poneBorde() {}
-      function quitaBordePoneSombra() {}
-      function poneRedondea() {}
-      function quitaSombra() {}
-      function quitaRedondea() {}
+      function poneBorde() {
+        let img = document.querySelector("img");
+        img.classList.add("borde");
+      }
+      function quitaBordePoneSombra() {
+        let img = document.querySelector("img");
+        img.classList.remove("borde");
+        img.classList.add("sombra");
+      }
+      function poneRedondea() {
+        let img = document.querySelector("img");
+        img.classList.add("redondea");
+      }
+      function quitaSombra() {
+        let img = document.querySelector("img");
+        img.classList.remove("sombra");
+      }
+      function quitaRedondea() {
+        let img = document.querySelector("img");
+        img.classList.remove("redondea");
+      }
 
       function animation() {
         setTimeout(poneBorde, 1000);

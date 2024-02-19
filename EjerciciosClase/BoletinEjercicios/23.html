@@ -18,11 +18,11 @@
       let pictures = [
         {
           name: "La joven de la perla",
-          url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Meisje_met_de_pare l.jpg/800px-Meisje_met_de_parel.jpg",
+          url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Meisje_met_de_parel.jpg/800px-Meisje_met_de_parel.jpg",
         },
         {
           name: "El beso",
-          url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/El_beso%28Gustav_K limt%29.jpg/640px-El_beso%28Gustav_Klimt%29.jpg",
+          url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/El_beso%28Gustav_Klimt%29.jpg/640px-El_beso%28Gustav_Klimt%29.jpg",
         },
         {
           name: "Mujer asomada a la ventana",
@@ -34,11 +34,21 @@
         },
         {
           name: "La gran ola",
-          url: "https://ichef.bbci.co.uk/news/640/cpsprodpb/11D93/production/_121270137_gett yimages-584047706.jpg",
+          url: "https://ichef.bbci.co.uk/news/640/cpsprodpb/11D93/production/_121270137_gettyimages-584047706.jpg",
         },
       ];
-      function rotateElements(array) {}
-      function replaceLinks(array) {}
+      function rotateElements(array) {
+        let first = array[0];
+        array.shift();
+        array.push(first);
+      }
+      function replaceLinks(array) {
+        let links = document.querySelectorAll("a");
+        for (let i = 0; i < links.length; i++) {
+          links[i].innerText = array[i].name;
+          links[i].href = array[i].url;
+        }
+      }
       setInterval(function () {
         replaceLinks(pictures);
         rotateElements(pictures);
