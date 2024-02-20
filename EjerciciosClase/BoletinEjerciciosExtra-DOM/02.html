@@ -31,9 +31,9 @@
     <button id="btn-procesar">Procesar</button>
 
     <script>
-      // Añade aquí el código para hacer que el botón "Procesar"
-      // escuche el evento "click" y llame a la función "procesar"
-      // cuando se produzca el evento.
+      document
+        .querySelector("#btn-procesar")
+        .addEventListener("click", procesar);
 
       function procesar() {
         let array = creaArray();
@@ -42,13 +42,23 @@
         ocultaBoton();
       }
 
-      function creaArray() {}
+      function creaArray() {
+        const TAM_ARRAY = 10;
+        let array = [];
+        for (let index = 0; index < TAM_ARRAY; index++) {
+          array[index] = Math.floor(Math.random() * 100 + 1);
+        }
+        return array;
+      }
 
       function pintaTablaVertical(array) {}
 
       function pintaTablaHorizontal(array) {}
 
-      function ocultaBoton() {}
+      function ocultaBoton() {
+        let boton = document.querySelector("#btn-procesar");
+        boton.classList.add("invisible");
+      }
     </script>
   </body>
 </html>

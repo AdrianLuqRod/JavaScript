@@ -76,9 +76,13 @@
           prompt("Dime el número de la máquina a ocupar (0-4):")
         );
 
-        // Escribe tu código aquí, puedes apoyarte en la
-        // función mostrarAdvertencia para mostrar los mensajes
-        // en rojo al usuario.
+        if (numMaquina >= 0 && numMaquina < NUM_MAQUINAS) {
+          let arrayMaquinas = document.querySelectorAll(".maquina");
+          let maquina = arrayMaquinas[numMaquina];
+          maquina.classList.add("ocupada");
+        } else {
+          mostrarAdvertencia("No hay una maquina con ese numero");
+        }
       }
 
       function liberaMaquina() {
@@ -88,9 +92,13 @@
           prompt("Dime el número de la máquina a liberar (0-4):")
         );
 
-        // Escribe tu código aquí, puedes apoyarte en la
-        // función mostrarAdvertencia para mostrar los mensajes
-        // en rojo al usuario.
+        if (numMaquina >= 0 && numMaquina < NUM_MAQUINAS) {
+          let arrayMaquinas = document.querySelectorAll(".maquina");
+          let maquina = arrayMaquinas[numMaquina];
+          maquina.classList.remove("ocupada");
+        } else {
+          mostrarAdvertencia("No hay una maquina con ese numero");
+        }
       }
 
       function mostrarAdvertencia(texto) {
