@@ -81,7 +81,9 @@
           let maquina = arrayMaquinas[numMaquina];
           maquina.classList.add("ocupada");
         } else {
-          mostrarAdvertencia("No hay una maquina con ese numero");
+          mostrarAdvertencia(
+            "Maquina con numero " + numMaquina + " no disponible"
+          );
         }
       }
 
@@ -97,7 +99,9 @@
           let maquina = arrayMaquinas[numMaquina];
           maquina.classList.remove("ocupada");
         } else {
-          mostrarAdvertencia("No hay una maquina con ese numero");
+          mostrarAdvertencia(
+            "Maquina con numero " + numMaquina + " no disponible"
+          );
         }
       }
 
